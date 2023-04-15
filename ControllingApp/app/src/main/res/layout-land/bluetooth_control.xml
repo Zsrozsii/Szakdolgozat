@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BluetoothControlActivity">
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/home_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/reverse"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/right"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <ImageButton
+        android:id="@+id/forward"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/up_arrow"
+        android:text="F"
+        app:layout_constraintBottom_toTopOf="@id/reverse"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintLeft_toRightOf="@id/left"
+        app:layout_constraintRight_toLeftOf="@id/right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="128dp"
+        android:background="@drawable/left_arrow"
+        android:text="Left"
+        app:layout_constraintBottom_toTopOf="@id/reverse"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/reverse"
+        app:layout_constraintTop_toBottomOf="@id/forward"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <ImageButton
+        android:id="@+id/right"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="132dp"
+        android:background="@drawable/right_arrow"
+        android:text="Right"
+        app:layout_constraintBottom_toTopOf="@+id/reverse"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintLeft_toRightOf="@id/reverse"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forward"
+        app:layout_constraintVertical_bias="0.241" />
+
+    <ImageButton
+        android:id="@+id/reverse"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/down_arrow"
+        android:text="R"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/follow"
+        app:layout_constraintRight_toLeftOf="@id/homeButton"
+        app:layout_constraintTop_toBottomOf="@id/forward" />
+
+    <Button
+        android:id="@+id/follow"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Follow line"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="333dp"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/left"
+        app:layout_constraintBottom_toTopOf="@id/stopFollow"
+        app:layout_constraintRight_toLeftOf="@id/reverse"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/stopFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop follow"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="357dp"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/follow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/reverse"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
